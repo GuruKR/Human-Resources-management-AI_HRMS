@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+/* 🌍 Global Base Styles */
+html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  @apply bg-gray-50 text-gray-900 dark:bg-neutral-900 dark:text-gray-100 transition-colors;
+}
+
+/* ✅ Default layout for app pages */
+body {
+  display: block;
+  background-color: transparent;
+  overflow-x: hidden;
+}
+
+/* 💼 LOGIN PAGE BACKGROUND */
+body.login-page {
+  background: linear-gradient(to right, #60a5fa, #6366f1, #8b5cf6);
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100vh !important;
+  overflow: hidden;
+  margin: 0;
+  color: #1f2937 !important;
+}
+
+/* 🌈 Smooth animated gradient (login only) */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ Page fade-in animation */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: pageFadeIn 0.6s ease-in-out;
+}
+
+/* 💫 Floating Card (used in login/register) */
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-float {
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+/* ✅ Safari Compatibility Fix */
+* {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+/* 🎨 Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.8);
+}
+
+/* 🎬 Modal Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* 🌍 GLOBAL TEXT & FORM VISIBILITY FIX */
+body, input, select, textarea, label, p, span, div {
+  color: #1f2937 !important; /* Tailwind text-gray-800 */
+}
+
+input,
+select,
+textarea {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  border-color: #d1d5db !important;
+  font-weight: 500;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280 !important; /* Tailwind text-gray-500 */
+  opacity: 1 !important;
+}
+
+label {
+  font-weight: 600;
+  color: #374151 !important;
+}
+
+button {
+  font-weight: 600;
+  color: white !important;
+}
+
+select:disabled,
+input:disabled {
+  background-color: #f3f4f6 !important;
+  color: #6b7280 !important;
+}
+
+/* ✅ Modal Text Contrast */
+.modal,
+div[role="dialog"],
+.fixed {
+  color: #1f2937 !important;
+}
+.modal input,
+.modal label,
+.modal p {
+  color: #1f2937 !important;
+}
+
+/* ✅ Light background readability */
+.bg-white {
+  color: #1f2937 !important;
+}
+
+/* 🌈 Login & Register Page Enhancements */
+.auth-container {
+  background: linear-gradient(to bottom right, #f0f7ff, #eefcfb);
+}
+
+.auth-card,
+.auth-container form,
+.auth-card input,
+.auth-card select,
+.auth-card textarea,
+.auth-card label,
+.auth-card button,
+.auth-card p,
+.auth-card span {
+  color: #1f2937 !important;
+  font-weight: 500;
+}
+
+/* Inputs in auth forms */
+.auth-card input,
+.auth-card select,
+.auth-card textarea {
+  background-color: #ffffff !important;
+  border-color: #d1d5db !important;
+  box-shadow: none !important;
+}
+
+/* Placeholders in auth forms */
+.auth-card input::placeholder,
+.auth-card textarea::placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+/* Disabled inputs in auth forms */
+.auth-card input:disabled {
+  background-color: #f3f4f6 !important;
+  color: #6b7280 !important;
+}
