@@ -188,3 +188,43 @@ div[role="dialog"],
   background-color: #f3f4f6 !important;
   color: #6b7280 !important;
 }
+
+/* 🌞 Light Theme Consistency Fix */
+
+/* For all light cards and sections */
+.bg-gray-900,
+.bg-gray-800,
+.bg-neutral-900,
+.dark-section {
+  background-color: #ffffff !important; /* pure white background */
+  color: #1f2937 !important; /* dark gray text */
+  border: 1px solid #e5e7eb !important; /* light gray border */
+}
+
+/* Ensure readability of text inside */
+.bg-gray-900 p,
+.bg-gray-900 span,
+.bg-gray-900 div,
+.bg-gray-900 strong,
+.bg-gray-900 h1,
+.bg-gray-900 h2,
+.bg-gray-800 p,
+.bg-gray-800 span,
+.bg-gray-800 strong {
+  color: #1f2937 !important; /* readable text */
+}
+
+/* Light mode card box-shadow for elevation */
+.bg-gray-900,
+.bg-gray-800 {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Markdown output styling for AI sections */
+.markdown-body {
+  background-color: #f9fafb !important; /* light gray background */
+  color: #1f2937 !important;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+}
